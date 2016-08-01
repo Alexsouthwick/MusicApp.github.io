@@ -9,3 +9,9 @@ $(document).ready(function() {
         }
     });
 });
+
+var w = $('#block_list ul').width();
+
+$("#block_list >ul").animate({
+    left: -w
+}, 30000)
