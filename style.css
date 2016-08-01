@@ -4,3 +4,14 @@
     background-color: blue;
     cursor: pointer;
 }
+
+.droppable {
+    width:300px;
+    height: 200px;
+    border: 2px solid #021a40;
+
+}
+
+.highlighted {
+    background-color: yellow;
+}
