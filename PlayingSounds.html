@@ -70,9 +70,9 @@ window.onclick = function() {
         var note = song.charAt(position),
             freq = scale[note];
         position += 1;
-        if(position >= song.length) {
-            position = 0;
-        }
+        // if(position >= song.length) {
+        //     position = 0;
+        // }
         if(freq) {
             createOscillator(freq);
         }
