@@ -26,3 +26,36 @@ h1 {
 .highlighted {
     background-color: yellow;
 }
+
+.beat{
+    height: 20px;
+    margin: 10px;
+    padding: 0px;
+}
+
+.WholeNote{
+    width: 120px;
+    height: 20px;
+    background-color: black;
+    display: inline-block;
+}
+
+.HalfNote{
+    width: 60px;
+    height: 20px;
+    background-color: black;
+    display: inline-block;
+}
+.QuarterNote{
+    width: 30px;
+    height: 20px;
+    background-color: black;
+    display: inline-block;
+}
+
+.EighthNote{
+    width: 15px;
+    height: 20px;
+    background-color: black;
+    display: inline-block;
+}
