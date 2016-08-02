@@ -8,6 +8,27 @@ h1 {
     font-family: "Trebuchet MS", Helvetica, serif;
 }
 
+#SelectRhythm{
+    text-align: center;
+    vertical-align: center;
+}
+
+#DisneyButton{
+    width: 100px;
+    height: 30px;
+    background-color: blue;
+    margin: auto;
+    cursor: pointer;
+}
+
+#AllegroButton{
+    width: 100px;
+    height: 30px;
+    background-color: blue;
+    margin: auto;
+    cursor: pointer;
+}
+
 .draggable {
     width:150px; 
     height: 80px;
@@ -46,6 +67,12 @@ h1 {
     background-color: black;
     display: inline-block;
 }
+.DottedQuarter{
+    width: 45px;
+    height: 20px;
+    background-color: black;
+    display: inline-block;
+}
 .QuarterNote{
     width: 30px;
     height: 20px;
@@ -55,6 +82,13 @@ h1 {
 
 .EighthNote{
     width: 15px;
+    height: 20px;
+    background-color: black;
+    display: inline-block;
+}
+
+.SixteenthNote{
+    width: 7.5px;
     height: 20px;
     background-color: black;
     display: inline-block;
