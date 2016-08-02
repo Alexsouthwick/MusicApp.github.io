@@ -13,7 +13,7 @@ h1 {
     vertical-align: center;
 }
 
-#DisneyButton{
+.DisneyButton{
     width: 100px;
     height: 30px;
     background-color: #22A7F0;
@@ -21,7 +21,7 @@ h1 {
     cursor: pointer;
 }
 
-#AllegroButton{
+.AllegroButton{
     width: 100px;
     height: 30px;
     background-color: #22A7F0;
@@ -30,7 +30,11 @@ h1 {
 }
 
 .ButtonSelected{
+    width: 100px;
+    height: 30px;
     background-color: #2574A9;
+    margin: auto;
+    cursor: pointer;
 }
 
 .draggable {
