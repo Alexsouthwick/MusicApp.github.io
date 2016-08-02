@@ -50,15 +50,24 @@ button {
 }
 
 .Scroller{
+    max-width: 900px;
+    max-height: 200px;
     width: 900px;
     border: 2px solid #021a40;
+    overflow-y: hidden;
+    overflow-x:auto; 
+    float:left;
+    display: inline;
 }
 .droppable {
-    display: inline-block;
+    display: inline;
+    margin-right: 10px;
+    float: left;
     width:200px;
     height: 130px;
     border: 2px solid #021a40;
     margin:10px;
+    position: relative;
 
 }
 

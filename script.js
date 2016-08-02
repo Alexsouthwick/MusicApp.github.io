@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    alert("something should happen1")
     $(".draggable").draggable();
     $(".droppable").droppable({
          drop: function(event, ui) {
@@ -7,16 +8,15 @@ $(document).ready(function() {
              .find("p")
              .html("dropped");
              alert("something should be happening");
-             $(".highlighted").on("mouseup", add_list);
          }
-         // $("#blocks_list").hide();
-         // $("#song").hide();
-
+        
     });
     var check=false;
     $(".check").on("click", checked);
     alert($("#blocks_list li").length);
-    // alert(".draggable".css(width));
+     $("#blocks_list").hide();
+     $("#song").hide();
+     $("div.Scroller").scrollLeft(300);
  });
 
 var combined_width= 0;
@@ -34,11 +34,6 @@ var combined_width= 0;
 
  }
  }
-alert(combined_width);
-
-if (combined_width >= 900){
-    $(".bar").scrollLeft(300);
-}
 
 $(document).ready(function(){
     var Disney_clicked = "notclicked";
