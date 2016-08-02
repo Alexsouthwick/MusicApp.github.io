@@ -49,8 +49,13 @@ button {
     height:30px;
 }
 
+.Scroller{
+    width: 900px;
+    border: 2px solid #021a40;
+}
 .droppable {
-    width:900px;
+    display: inline-block;
+    width:200px;
     height: 130px;
     border: 2px solid #021a40;
     margin:10px;

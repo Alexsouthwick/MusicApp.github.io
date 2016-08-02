@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    alert("something should be happening1");
     $(".draggable").draggable();
     $(".droppable").droppable({
          drop: function(event, ui) {
