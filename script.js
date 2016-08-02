@@ -12,23 +12,26 @@ $(document).ready(function() {
          }
     });
     var check=false;
-    var width= $(".draggable").width();
-    alert(width);
     $(".check").on("click", checked);
-    alert(check);
+    alert($("#blocks_list li").length);
     // alert(".draggable".css(width));
  });
 
+var combined_width= 0;
+
 
  function checked() {
+    var width= $(".draggable").width();
     check=true;
-    alert(check);
+    alert( combined_width);
     if(check==true) {
-     $("#blocks_list").append("<li>width</li>");
+     $("#blocks_list").append("<li> block </li>");
+     alert($("#blocks_list li").length);
+     combined_width= ((width) * ($("#blocks_list li").length));
+     alert(combined_width);
      $("#song").append("<li> song item </li>");
-    alert("added to list");
-    alert(blocks_list);
-    alert(song);
+    // alert(blocks_list);
+    // alert(song);
  }
  }
 
