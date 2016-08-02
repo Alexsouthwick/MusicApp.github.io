@@ -16,7 +16,7 @@ h1 {
 #DisneyButton{
     width: 100px;
     height: 30px;
-    background-color: blue;
+    background-color: #22A7F0;
     margin: auto;
     cursor: pointer;
 }
@@ -24,9 +24,13 @@ h1 {
 #AllegroButton{
     width: 100px;
     height: 30px;
-    background-color: blue;
+    background-color: #22A7F0;
     margin: auto;
     cursor: pointer;
+}
+
+.ButtonSelected{
+    background-color: #2574A9;
 }
 
 .draggable {
@@ -59,11 +63,18 @@ button {
     padding: 0px;
 }
 
+.measure{
+    display: inline-block;
+    margin-left: 40px;
+    width: 150px;
+}
+
 .WholeNote{
     width: 120px;
     height: 20px;
     background-color: black;
     display: inline-block;
+    margin: auto;
 }
 
 .HalfNote{

@@ -43,15 +43,18 @@ $(document).ready(function(){
 
     $("#Disney").hide();
     $("#Allegro").hide();
-    var Allegro_selected = false;
+    
     var Disney_selected = false;
+    var Allegro_selected = false;
 
     $('#DisneyButton').click(function(){
-        var Disney_clicked = "clicked";
+        Disney_clicked = "clicked";
         if (Disney_clicked == "clicked" && Disney_selected == false && Allegro_selected == false){
+            $("#DisneyButton").addClass("ButtonSelected");
             Disney_selected = true;
             Disney_clicked = "notclicked";
             $("#Disney").show();
+            console.log("buttonselected");
         }
         if (Disney_clicked == "clicked" && Disney_selected == true){
             Disney_selected = false;
@@ -72,4 +75,4 @@ $(document).ready(function(){
         }
     });
 });
- 
+
