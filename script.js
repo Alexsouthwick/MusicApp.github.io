@@ -47,9 +47,11 @@ $(document).ready(function(){
     $('#DisneyButton').click(function(){
         Disney_clicked = "clicked";
         if (Disney_clicked == "clicked" && Disney_selected == false && Allegro_selected == false){
+            $("#DisneyButton").addClass("ButtonSelected");
             Disney_selected = true;
             Disney_clicked = "notclicked";
             $("#Disney").show();
+            console.log("buttonselected");
         }
         if (Disney_clicked == "clicked" && Disney_selected == true){
             Disney_selected = false;
