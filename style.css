@@ -5,7 +5,7 @@ body {
 h1 {
     color: white;
     font-style: oblique;
-    font-family: "Trebuchet MS", Helvetica, serif;
+    font-family: "Trebuchet MS", Helvetica, Serif;
 }
 
 .draggable {
