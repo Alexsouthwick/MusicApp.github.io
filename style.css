@@ -36,6 +36,11 @@ h1 {
     cursor: pointer;
 }
 
+button {
+    width:50px;
+    height:30px;
+}
+
 .droppable {
     width:900px;
     height: 130px;
@@ -54,11 +59,18 @@ h1 {
     padding: 0px;
 }
 
+.measure{
+    display: inline-block;
+    margin-left: 40px;
+    width: 150px;
+}
+
 .WholeNote{
     width: 120px;
     height: 20px;
     background-color: black;
     display: inline-block;
+    margin: auto;
 }
 
 .HalfNote{

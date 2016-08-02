@@ -1,20 +1,37 @@
 $(document).ready(function() {
+    alert("something should be happening1");
     $(".draggable").draggable();
     $(".droppable").droppable({
-        drop: function(event, ui) {
-            $(this)
-            .addClass("highlighted")
-            .find("p")
-            .html("dropped");
-        }
+         drop: function(event, ui) {
+             $(this)
+             .addClass("highlighted")
+             .find("p")
+             .html("dropped");
+             alert("something should be happening");
+             $(".highlighted").on("mouseup", add_list);
+         }
     });
-});
+    var check=false;
+    var width= $(".draggable").width();
+    alert(width);
+    $(".check").on("click", checked);
+    alert(check);
+    // alert(".draggable".css(width));
+ });
 
-var w = $('#block_list ul').width();
 
-$("#block_list >ul").animate({
-    left: -w
-}, 30000)
+ function checked() {
+    check=true;
+    alert(check);
+    if(check==true) {
+     $("#blocks_list").append("<li>width</li>");
+     $("#song").append("<li> song item </li>");
+    alert("added to list");
+    alert(blocks_list);
+    alert(song);
+ }
+ }
+
 
 
 $(document).ready(function(){
@@ -23,11 +40,12 @@ $(document).ready(function(){
 
     $("#Disney").hide();
     $("#Allegro").hide();
-    var Allegro_selected = false;
+    
     var Disney_selected = false;
+    var Allegro_selected = false;
 
     $('#DisneyButton').click(function(){
-        var Disney_clicked = "clicked";
+        Disney_clicked = "clicked";
         if (Disney_clicked == "clicked" && Disney_selected == false && Allegro_selected == false){
             Disney_selected = true;
             Disney_clicked = "notclicked";
@@ -52,4 +70,3 @@ $(document).ready(function(){
         }
     });
 });
- 
