@@ -9,6 +9,9 @@ $(document).ready(function() {
              alert("something should be happening");
              $(".highlighted").on("mouseup", add_list);
          }
+         // $("#blocks_list").hide();
+         // $("#song").hide();
+
     });
     var check=false;
     $(".check").on("click", checked);
@@ -17,7 +20,6 @@ $(document).ready(function() {
  });
 
 var combined_width= 0;
-
 
  function checked() {
     var width= $(".draggable").width();
@@ -29,12 +31,14 @@ var combined_width= 0;
      combined_width= ((width) * ($("#blocks_list li").length));
      alert(combined_width);
      $("#song").append("<li> song item </li>");
-    // alert(blocks_list);
-    // alert(song);
+
  }
  }
+alert(combined_width);
 
-
+if (combined_width >= 900){
+    $(".bar").scrollLeft(300);
+}
 
 $(document).ready(function(){
     var Disney_clicked = "notclicked";
