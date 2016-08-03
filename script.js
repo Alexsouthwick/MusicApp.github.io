@@ -231,7 +231,7 @@ $(document).ready(function(){
         if (Seven_clicked == "clicked" && Seven_selected == true){
             Seven_selected = false;
             $(".SevenNote").hide();
-            $("#Seven").removeClass("NoteSelectionSelected");
+            $("#Five").removeClass("NoteSelectionSelected");
         }
     });
 });
