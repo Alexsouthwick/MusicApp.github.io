@@ -13,7 +13,7 @@
 
     <body>
 
-        <h1> Cadenza </h1>
+    <h1> Cadenza </h1>
     <ol id= "blocks_list">
     </ol>
     
@@ -28,14 +28,50 @@
         <p class = "AllegroButton"> Allegro </p>
     </div>
 
-    <div id= "block_list">
-    <div class="draggable" class="melodies">
-        <h4 id ="block1"> C G E B </h4>
+    <div class = "Sidebar">
+        <div class = "SideNavbar">
+            <p id = "One" class = "NoteSelection"> 1 </p>
+            <p id = "Two" class = "NoteSelection"> 2</p>
+            <p id = "Three" class = "NoteSelection"> 3 </p>
+            <p id = "Four" class = "NoteSelection"> 4 </p>
+            <p id = "Five" class = "NoteSelection"> 5 </p>
+            <p id = "Six" class = "NoteSelection"> 6 </p>
+            <p id = "Seven" class = "NoteSelection"> 7 <p>
+
         </div>
-    <div class="draggable" class="melodies" id = "block2">
-        <h4> F G B A </h4>
-    </div>
-</div> 
+        <div id = "block_list" class = "OneNote">
+            <div class = "draggable" class = "melodies">
+                <h4> C </h4>
+            </div>
+            <div class = "draggable" class = "melodies">
+                <h4> B </h4>
+            </div>
+        </div>
+        <div id = "block_list" class = "TwoNote">
+            <div class = "draggable" class = "melodies">
+                <h4> C E </h4>
+            </div>
+            <div class = "draggable" class = "melodies">
+                <h4> A F </h4>
+            </div>
+        </div>
+        <div id = "block_list" class = "ThreeNote">
+            <div class = "draggable" class = "melodies">
+                <h4> A F G </h4>
+            </div>
+            <div class = "draggable" class = "melodies">
+                <h4> C E D </h4>
+            </div>
+        </div>
+        <div id= "block_list" class = "FourNote">
+            <div class="draggable" class="melodies" id = "block1">
+                <h4> C G E B </h4>
+            </div>
+            <div class="draggable" class="melodies" id = "block2">
+                <h4> F G B A </h4>
+            </div>
+        </div>
+    </div> 
     <div class = "Scroller">
         <div class = "beat" id = "Disney">
             <div class = "measure">
@@ -58,31 +94,132 @@
             <div class = "measure">
                 <div class = "HalfNote"></div>
                 <div class = "HalfNote"></div>
-            </div>          
-        </div>
-
-        <div class = "beat" id = "Allegro">
+            </div>
             <div class = "measure">
-                <div class = "HalfNote"></div>
+                <div class = "QuarterNote"></div>
+                <div class = "EighthNote"></div>
+                <div class = "QuarterNote"></div>
+                <div class = "EighthNote"></div>
+                <div class = "QuarterNote"></div>
+            </div>
+            <div class = "measure">
                 <div class = "QuarterNote"></div>
                 <div class = "QuarterNote"></div>
+                <div class = "QuarterNote"></div>
+                <div class = "QuarterNote"></div>
+            </div>
+            <div class = "measure">
+                <div class = "QuarterNote"></div>
+                <div class = "QuarterNote"></div>
+                <div class = "QuarterNote"></div>
+                <div class = "EighthNote"></div>
+                <div class = "EighthNote"></div>
             </div>
             <div class = "measure">
                 <div class = "DottedQuarter"></div>
                 <div class = "EighthNote"></div>
-                <div class = "EighthNote"></div>
-                <div class = "HalfNote"></div>
-            </div>
-            <div class = "measure">
-                <div class = "HalfNote"></div>
                 <div class = "QuarterNote"></div>
                 <div class = "QuarterNote"></div>
             </div>
             <div class = "measure">
                 <div class = "QuarterNote"></div>
                 <div class = "EighthNote"></div>
-                <div class = "SixteenthNote"></div>
-                <div class = "SixteenthNote"></div>    
+                <div class = "QuarterNote"></div>
+                <div class = "EighthNote"></div>
+                <div class = "QuarterNote"></div>
+            </div>
+            <div class = "measure">
+                <div class = "WholeNote"></div>
+            </div>
+            <div class = "measure">
+                <div class = "QuarterNote"></div>
+                <div class = "EighthNote"></div>
+                <div class = "QuarterNote"></div>
+                <div class = "EighthNote"></div>
+                <div class = "QuarterNote"></div>
+            </div>
+            <div class = "measure">
+                <div class = "HalfNote"></div>
+                <div class = "HalfNote"></div>
+            </div>
+        </div>
+
+        <div class = "beat" id = "Allegro">
+            <div class = "measure">
+                <div class = "QuarterNote"></div>
+                <div class = "QuarterNote"></div>
+                <div class = "QuarterNote"></div>
+                <div class = "QuarterNote"></div>
+            </div>
+            <div class = "measure">
+                <div class = "EighthNote"></div>
+                <div class = "EighthNote"></div>
+                <div class = "EighthNote"></div>
+                <div class = "EighthNote"></div>
+                <div class = "QuarterNote"></div>
+                <div class = "QuarterNote"></div>
+            </div>
+            <div class = "measure">
+                <div class = "QuarterNote"></div>
+                <div class = "QuarterNote"></div>
+                <div class = "QuarterNote"></div>
+                <div class = "QuarterNote"></div>
+            </div>
+            <div class = "measure">
+                <div class = "EighthNote"></div>
+                <div class = "EighthNote"></div>
+                <div class = "EighthNote"></div>
+                <div class = "EighthNote"></div>
+                <div class = "HalfNote"></div>
+            </div>
+            <div class = "measure">
+                <div class = "QuarterNote"></div>
+                <div class = "QuarterNote"></div>
+                <div class = "QuarterNote"></div>
+                <div class = "QuarterNote"></div>
+            </div>
+            <div class = "measure">
+                <div class = "QuarterNote"></div>
+                <div class = "QuarterNote"></div>
+                <div class = "QuarterNote"></div>
+                <div class = "QuarterNote"></div>
+            </div>
+            <div class = "measure">
+                <div class = "QuarterNote"></div>
+                <div class = "QuarterNote"></div>
+                <div class = "QuarterNote"></div>
+                <div class = "QuarterNote"></div>
+            </div>
+            <div class = "measure">
+                <div class = "QuarterNote"></div>
+                <div class = "QuarterNote"></div>
+                <div class = "HalfNote"></div>
+            </div>
+            <div class = "measure">
+                <div class = "QuarterNote"></div>
+                <div class = "QuarterNote"></div>
+                <div class = "QuarterNote"></div>
+                <div class = "QuarterNote"></div>
+            </div>
+            <div class = "measure">
+                <div class = "EighthNote"></div>
+                <div class = "EighthNote"></div>
+                <div class = "EighthNote"></div>
+                <div class = "EighthNote"></div>
+                <div class = "QuarterNote"></div>
+                <div class = "QuarterNote"></div>
+            </div>
+            <div class = "measure">
+                <div class = "QuarterNote"></div>
+                <div class = "QuarterNote"></div>
+                <div class = "QuarterNote"></div>
+                <div class = "QuarterNote"></div>
+            </div>
+            <div class = "measure">
+                <div class = "EighthNote"></div>
+                <div class = "EighthNote"></div>
+                <div class = "EighthNote"></div>
+                <div class = "EighthNote"></div>
                 <div class = "HalfNote"></div>
             </div>
         </div>
@@ -99,7 +236,6 @@
             <div class="droppable" class="bar"></div>
             <div class = "droppable" class = "bar"></div>
             <div class = "droppable" class = "bar"></div>
-    
         </div>
     </div>
 
