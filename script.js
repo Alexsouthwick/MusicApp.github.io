@@ -1,14 +1,14 @@
 
 
-$(".draggable").draggable({
-    helper: 'clone'
-});
+// $(".draggable").draggable({
+//     helper: 'clone'
+// });
 
-$("#droppable").droppable({
-    drop: function(ev, ui) {
-        $(this).append(ui.draggable.clone(true));
-    }
-});
+// $("#droppable").droppable({
+//     drop: function(ev, ui) {
+//         $(this).append(ui.draggable.clone(true));
+//     }
+// });
  var highlight=false;
  var combined_width= 0;
  var song= "";
@@ -32,17 +32,23 @@ $(document).ready(function() {
                 combined_width= ((width) * ($("#blocks_list li").length));
                 console.log(combined_width);
                 var draggableid= ui.draggable.attr("id");
+                // text= draggableid;
+                // console.log(text);
+                // $("ui.droppable.h4").text(draggableid);
+                // console.log($("ui.droppable.h4").text(draggableid));
 
-                if (draggableid == 'cgeb'){
+
+                if (draggableid == 'C G E B'){
                  song += "cgeb"; 
                  console.log('song: ', song);  
+
                  }
 
-                 else if (draggableid=="fgba"){
+                 else if (draggableid=="F G B A"){
                  song += "fgba"; 
                  console.log(song);  
                  }
-                 
+
                  else
                     {console.log("else happened");}
                 
@@ -50,10 +56,10 @@ $(document).ready(function() {
          }
         
     });
-    console.log($("#blocks_list li").length);
-     $("#blocks_list").hide();
-     $("#song").hide();
-     $("div.Scroller").scrollLeft(300);
+    // console.log($("#blocks_list li").length);
+      $("#blocks_list").hide();
+      $("#song").hide();
+    //  $("div.Scroller").scrollLeft(300);
  });
 
 
