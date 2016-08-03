@@ -1,75 +1,65 @@
 
 
-$(".draggable").draggable({
-    helper: 'clone'
-});
+// $(".draggable").draggable({
+//     helper: 'clone'
+// });
 
-$("#droppable").droppable({
-    drop: function(ev, ui) {
-        $(this).append(ui.draggable.clone(true));
-    }
-});
+// $("#droppable").droppable({
+//     drop: function(ev, ui) {
+//         $(this).append(ui.draggable.clone(true));
+//     }
+// });
  var highlight=false;
  var combined_width= 0;
  var song= "";
 $(document).ready(function() {
-    alert("something should happen1")
+    console.log("something should happen1")
     $(".draggable").draggable({
         helper: 'clone'
     });
     $(".droppable").droppable({
          drop: function(event, ui) {
-             $(this).append(ui.draggable.css({position: 'relative'}));
+            $(this)
+            // $(ui.draggable).detach().css({top:0, left: 0}).appendTo(this);
              .addClass("highlighted")
-
-             .find("p")
-             .html("dropped")
-             .append(ui.dragable.clone(true));
-
              highlight= true;
-             alert(highlight);
-             alert("something should be happening");
+             console.log(highlight);
+             console.log("something should be happening");
              if (highlight == true) {
                 var width= $(".draggable").width();
                 $("#blocks_list").append("<li> block </li>");
-                alert($("#blocks_list li").length);
+                console.log($("#blocks_list li").length);
                 combined_width= ((width) * ($("#blocks_list li").length));
-                alert(combined_width);
-                var draggableid= ui.draggable.find("h4").attr("id");
-                alert(draggableid);
-                string_draggableid= String(draggableid);
-                alert(string_draggableid);
-                // melody= document.getElementById("draggableid").innerHTML;
-                melody= ui.draggable.find("h4").attr("id").getElementsByTagName('h4')[0].innerHTML;
-                alert(melody);
-                string_melody= String(melody);
-                alert(string_melody);
-                // melody2= block2.getElementsByTagName('h4')[0].innerHTML;
-                // // alert(melody2);
-                //  string_melody2= String(melody2);
-                // alert(string_melody2);
+                console.log(combined_width);
+                var draggableid= ui.draggable.attr("id");
+                // text= draggableid;
+                // console.log(text);
+                // $("ui.droppable.h4").text(draggableid);
+                // console.log($("ui.droppable.h4").text(draggableid));
 
-                if (string_melody.localeCompare("C G E B")){
-                 song += "cgeb";
-                 highlight= false; 
-                 alert(song);  
+
+                if (draggableid == 'C G E B'){
+                 song += "cgeb"; 
+                 console.log('song: ', song);  
+
                  }
 
-                 else if (string_melody.localeCompare("F G B A")){
+                 else if (draggableid=="F G B A"){
                  song += "fgba"; 
-                 alert(song);  
+                 console.log(song);  
                  }
+
                  else
-                    {alert("else happened");}
+                    {console.log("else happened");}
                 
     }
          }
         
     });
-    alert($("#blocks_list li").length);
-     $("#blocks_list").hide();
-     $("#song").hide();
-     $("div.Scroller").scrollLeft(300);
+    // console.log($("#blocks_list li").length);
+      $("#blocks_list").hide();
+      $("#song").hide();
+    //  $("div.Scroller").scrollLeft(300);
  });
 
 
@@ -189,7 +179,7 @@ $(document).ready(function(){
             $("#Four").addClass("NoteSelectionSelected");
             Four_selected = true;
             Four_clicked = "notclicked";
-            $(".TwoNote").show();
+            $(".FourNote").show();
         }
         if (Four_clicked == "clicked" && Four_selected == true){
             Four_selected = false;
