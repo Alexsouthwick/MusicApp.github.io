@@ -58,33 +58,28 @@ button {
 }
 
 .Scroller{
-    max-width: 900px;
-    max-height: 200px;
     width: 900px;
+    height: 200px;
+    overflow: scroll;
+    white-space: nowrap;
     border: 2px solid #021a40;
     overflow-y: hidden;
-    overflow-x:auto; 
-    float:left;
-    display: inline;
+    overflow-x:scroll;
+    margin:20px;
+}
+
+.DropBar{
+    display: inline-block;
+    width: 900px;
+    height: 200px;
 }
 .droppable {
-<<<<<<< HEAD
-    display: inline;
-    margin-right: 10px;
-    float: left;
-    width:200px;
-    height: 130px;
-    border: 2px solid #021a40;
-    margin:10px;
-    position: relative;
-=======
     display: inline-block;
-    width:150px;
-    height: 80px;
+    margin-right: 10px;
+    width:155px;
+    height: 85px;
     border: 2px solid #021a40;
-    margin-left: 40px;
->>>>>>> bf78616d323a39fb075ad33fbc0f1c8e4ae87079
-
+    margin:10px;    
 }
 
 .highlighted {
@@ -100,8 +95,8 @@ button {
 
 .measure{
     display: inline-block;
-    margin-left: 40px;
-    width: 150px;
+    margin-right: 10px;
+    width: 170px;
 }
 
 .WholeNote{
