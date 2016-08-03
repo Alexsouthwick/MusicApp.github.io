@@ -1,3 +1,6 @@
+
+ var highlight=false;
+ var combined_width= 0;
 $(document).ready(function() {
     alert("something should happen1")
     $(".draggable").draggable();
@@ -7,33 +10,50 @@ $(document).ready(function() {
              .addClass("highlighted")
              .find("p")
              .html("dropped");
+             highlight= true;
+             alert(highlight);
              alert("something should be happening");
+             if (highlight == true) {
+                var width= $(".draggable").width();
+                $("#blocks_list").append("<li> block </li>");
+                alert($("#blocks_list li").length);
+                combined_width= ((width) * ($("#blocks_list li").length));
+                alert(combined_width);
+                $("#song").append("<li> song item </li>");
+
+    }
          }
         
     });
-    var check=false;
-    $(".check").on("click", checked);
     alert($("#blocks_list li").length);
      $("#blocks_list").hide();
      $("#song").hide();
      $("div.Scroller").scrollLeft(300);
  });
 
-var combined_width= 0;
+// var combined_width= 0;
 
- function checked() {
-    var width= $(".draggable").width();
-    check=true;
-    alert( combined_width);
-    if(check==true) {
-     $("#blocks_list").append("<li> block </li>");
-     alert($("#blocks_list li").length);
-     combined_width= ((width) * ($("#blocks_list li").length));
-     alert(combined_width);
-     $("#song").append("<li> song item </li>");
+ // function checked() {
+ //    var width= $(".draggable").width();
+ //    check=true;
+ //    alert( combined_width);
+    // if (highlight == true) {
+    //  $("#blocks_list").append("<li> block </li>");
+    //  alert($("#blocks_list li").length);
+    //  combined_width= ((width) * ($("#blocks_list li").length));
+    //  alert(combined_width);
+    //  $("#song").append("<li> song item </li>");
 
- }
- }
+    // }
+    // if(check==true) {
+    //  $("#blocks_list").append("<li> block </li>");
+    //  alert($("#blocks_list li").length);
+    //  combined_width= ((width) * ($("#blocks_list li").length));
+    //  alert(combined_width);
+    //  $("#song").append("<li> song item </li>");
+
+ // }
+ // }
 
 $(document).ready(function(){
     var Disney_clicked = "notclicked";
