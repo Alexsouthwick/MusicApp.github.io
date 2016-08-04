@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 // $(".draggable").draggable({
 //     helper: 'clone'
@@ -13,6 +14,21 @@
  var highlight=false;
  var combined_width= 0;
  var song= "";
+=======
+$(".draggable").draggable({
+    helper: 'clone'
+});
+
+$("#droppable").droppable({
+    drop: function(event, ui) {
+        $(this).append(ui.draggable.clone(true));
+    }
+});
+
+var highlight=false;
+var combined_width= 0;
+var song= "";
+>>>>>>> ddb99ed9d64c5c61492c93009e0621fa0b9b4f41
 $(document).ready(function() {
     console.log("something should happen1")
     $(".draggable").draggable({
@@ -23,12 +39,11 @@ $(document).ready(function() {
          drop: function(event, ui) {
             $(this)
             // $(ui.draggable).detach().css({top:0, left: 0}).appendTo(this);
-                .addClass("highlighted")
-                highlight= true;
-                console.log(highlight);
-                console.log("something should be happening");
-
-            if (highlight == true) {
+             .addClass("highlighted")
+             highlight= true;
+             console.log(highlight);
+             console.log("something should be happening");
+             if (highlight == true) {
                 var width= $(".draggable").width();
                 $("#blocks_list").append("<li> block </li>");
                 console.log($("#blocks_list li").length);
@@ -50,6 +65,7 @@ $(document).ready(function() {
                     song += "fgba"; 
                     console.log(song);  
                 }
+
                  else if (draggableid=="C"){
                  song += "c"; 
                  console.log(song);  
@@ -78,14 +94,13 @@ $(document).ready(function() {
                     else
                         {console.log("else happened");}
             }
-    }
+
         
     });
-    // console.log($("#blocks_list li").length);
       $("#blocks_list").hide();
       $("#song").hide();
-      $(".text_blocl").hide();
-    //  $("div.Scroller").scrollLeft(300);
+
+      $(".text_block").hide();
  });
 
 
@@ -252,13 +267,14 @@ $(document).ready(function(){
         if (Seven_clicked == "clicked" && Seven_selected == true){
             Seven_selected = false;
             $(".SevenNote").hide();
-            $("#Five").removeClass("NoteSelectionSelected");
+            $("#Seven").removeClass("NoteSelectionSelected");
+
         }
     });
 });
 
 var scale = {};
-document.getElementById('btn').onclick = function() {
+document.getElementById('play').onclick = function() {
 
     var audio = new window.AudioContext(),
         position = 0,
@@ -301,10 +317,11 @@ document.getElementById('btn').onclick = function() {
         }
     }
 };
-// document.getElementById('btn2').onclick = function() {
-//     song = "";
-// };
-    
+
+document.getElementById('clear').onclick = function() {
+    song = "";
+};
+   
 $(document).ready(function(){
     var Disney_clicked = "notclicked";
     var Allegro_clicked = "notclicked";
@@ -471,4 +488,6 @@ $(document).ready(function(){
             $("#Seven").removeClass("NoteSelectionSelected");
         }
     });
+
 });
+
