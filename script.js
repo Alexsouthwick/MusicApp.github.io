@@ -32,6 +32,9 @@ $(document).ready(function() {
                 combined_width= ((width) * ($("#blocks_list li").length));
                 console.log(combined_width);
                 var draggableid= ui.draggable.attr("id");
+                 $(".text_block").text(draggableid);
+                $(".text_block").show();
+
                 // text= draggableid;
                 // console.log(text);
                 // $("ui.droppable.h4").text(draggableid);
@@ -59,6 +62,7 @@ $(document).ready(function() {
     // console.log($("#blocks_list li").length);
       $("#blocks_list").hide();
       $("#song").hide();
+      $(".text_block").hide();
     //  $("div.Scroller").scrollLeft(300);
  });
 
