@@ -51,16 +51,13 @@ button {
     height:30px;
 }
 
-#play{
-    margin: auto;
-}
-#clear{
-    margin: auto;
-}
+
 #playstop{
-    text-align: center;
-    margin-top: 40px;
+    float: right;
+    text-align: right;
+    margin-top: 0px;
     margin-bottom: 40px;
+    margin-right: 20px;
 }
 .draggable {
     width:145px; 
