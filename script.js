@@ -17,15 +17,17 @@ $(document).ready(function() {
     $(".draggable").draggable({
         helper: 'clone'
     });
+
     $(".droppable").droppable({
          drop: function(event, ui) {
             $(this)
             // $(ui.draggable).detach().css({top:0, left: 0}).appendTo(this);
-             .addClass("highlighted")
-             highlight= true;
-             console.log(highlight);
-             console.log("something should be happening");
-             if (highlight == true) {
+                .addClass("highlighted")
+                highlight= true;
+                console.log(highlight);
+                console.log("something should be happening");
+
+            if (highlight == true) {
                 var width= $(".draggable").width();
                 $("#blocks_list").append("<li> block </li>");
                 console.log($("#blocks_list li").length);
@@ -37,23 +39,21 @@ $(document).ready(function() {
                 // $("ui.droppable.h4").text(draggableid);
                 // console.log($("ui.droppable.h4").text(draggableid));
 
-
                 if (draggableid == 'C G E B'){
-                 song += "cgeb"; 
-                 console.log('song: ', song);  
+                    song += "cgeb"; 
+                    console.log('song: ', song);  
 
-                 }
+                    }
 
-                 else if (draggableid=="F G B A"){
-                 song += "fgba"; 
-                 console.log(song);  
-                 }
+                else if (draggableid=="F G B A"){
+                    song += "fgba"; 
+                    console.log(song);  
+                }
 
-                 else
-                    {console.log("else happened");}
-                
+                    else
+                        {console.log("else happened");}
+            }
     }
-         }
         
     });
     // console.log($("#blocks_list li").length);
