@@ -52,6 +52,31 @@ $(document).ready(function() {
                  console.log(song);  
                  }
 
+                 else if (draggableid=="C"){
+                 song += "c"; 
+                 console.log(song);  
+                 }
+                 else if (draggableid=="B"){
+                 song += "b"; 
+                 console.log(song);  
+                 }
+                 else if (draggableid=="C E"){
+                 song += "ce"; 
+                 console.log(song);  
+                 }
+                 else if (draggableid=="A F"){
+                 song += "af"; 
+                 console.log(song);  
+                 }
+                 else if (draggableid=="A F G"){
+                 song += "afg"; 
+                 console.log(song);  
+                 }
+                 else if (draggableid=="C E D"){
+                 song += "ced"; 
+                 console.log(song);  
+                 }
+                 
                  else
                     {console.log("else happened");}
                 
