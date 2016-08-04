@@ -15,7 +15,7 @@ var song= "";
 
 
 $(document).ready(function() {
-    console.log("something should happen1")
+    console.log("something should happen1");
 
     $(".draggable").draggable({
         helper: 'clone'
@@ -46,8 +46,7 @@ $(document).ready(function() {
                 if (draggableid == 'C G E B'){
                     song += "cgeb"; 
                     console.log('song: ', song);  
-
-                    }
+                }
 
                 else if (draggableid=="F G B A"){
                     song += "fgba"; 
@@ -79,8 +78,8 @@ $(document).ready(function() {
                  console.log(song);  
                  }
 
-                    else
-                        {console.log("else happened");}
+                else
+                    {console.log("else happened");}
             }
 
         
@@ -90,6 +89,28 @@ $(document).ready(function() {
       $(".text_block").hide();
  });
 
+$(document).ready(function(){
+    $( "#C" ).mouseenter(function() {
+        console.log("mouse entered!");
+
+        setInterval(play, 1000 / 4);
+        function createOscillator(freq) {
+            var osc = audio.createOscillator();
+            osc.frequency.value = freq;
+            osc.type = "square";
+            osc.connect(audio.destination);
+            osc.start(0);
+
+            setTimeout(function() {
+                osc.stop(0);
+                osc.disconnect(audio.destination);
+            }, 1000 / 4)
+        }
+        function play() {
+                freq = 261.63;
+        }
+    });
+});
 
 $(document).ready(function(){
     var Disney_clicked = "notclicked";
@@ -261,7 +282,7 @@ $(document).ready(function(){
 });
 
 var scale = {};
-document.getElementById('play').onclick = function() {
+$('#PlayButton').onclick = function() {
 
     var audio = new window.AudioContext(),
         position = 0,
@@ -305,6 +326,6 @@ document.getElementById('play').onclick = function() {
     }
 };
 
-document.getElementById('clear').onclick = function() {
+$('#clear').onclick = function() {
     song = "";
 };
