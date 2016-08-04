@@ -1,5 +1,3 @@
-
-
 // $(".draggable").draggable({
 //     helper: 'clone'
 // });
@@ -84,6 +82,55 @@ $(document).ready(function() {
          }
         
     });
+
+
+var scale = {};
+document.getElementById('btn').onclick = function() {
+
+    var audio = new window.AudioContext(),
+        position = 0,
+        scale = {
+            g: 392,
+            c: 261.63,
+            f: 349.23,
+            d: 293.66,
+            e: 329.63,
+            a: 261.63,
+            b: 493.88
+        };
+        // song = "edcdeee-ddd-eee-edcdeee-cddedc---";
+
+    setInterval(play, 1000 / 4);
+
+    function createOscillator(freq) {
+        var osc = audio.createOscillator();
+
+        osc.frequency.value = freq;
+        osc.type = "square";
+        osc.connect(audio.destination);
+        osc.start(0);
+
+        setTimeout(function() {
+            osc.stop(0);
+            osc.disconnect(audio.destination);
+        }, 1000 / 4)
+    }
+
+    function play() {
+        var note = song.charAt(position),
+            freq = scale[note];
+        position += 1;
+        // if(position >= inputvalue.length) {
+        //     position = 0;
+        // }
+        if(freq) {
+            createOscillator(freq);
+        }
+    }
+};
+// document.getElementById('btn2').onclick = function() {
+//     song = "";
+// };
     // console.log($("#blocks_list li").length);
       $("#blocks_list").hide();
       $("#song").hide();
@@ -259,8 +306,3 @@ $(document).ready(function(){
         }
     });
 });
-
-
-
-    
-
