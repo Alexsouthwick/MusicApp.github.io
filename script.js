@@ -1,5 +1,4 @@
 
-
 $(".draggable").draggable({
     helper: 'clone'
 });
@@ -13,8 +12,11 @@ $("#droppable").droppable({
 var highlight=false;
 var combined_width= 0;
 var song= "";
+
+
 $(document).ready(function() {
     console.log("something should happen1")
+
     $(".draggable").draggable({
         helper: 'clone'
     });
@@ -28,39 +30,64 @@ $(document).ready(function() {
              console.log(highlight);
              console.log("something should be happening");
              if (highlight == true) {
-                var width= $(".draggable").width();
-                $("#blocks_list").append("<li> block </li>");
-                console.log($("#blocks_list li").length);
-                combined_width= ((width) * ($("#blocks_list li").length));
-                console.log(combined_width);
+                // var width= $(".draggable").width();
+                // $("#blocks_list").append("<li> block </li>");
+                // console.log($("#blocks_list li").length);
+                // combined_width= ((width) * ($("#blocks_list li").length));
+                // console.log(combined_width);
                 var draggableid= ui.draggable.attr("id");
+                $(".text_block").show();
                 // text= draggableid;
                 // console.log(text);
                 // $("ui.droppable.h4").text(draggableid);
                 // console.log($("ui.droppable.h4").text(draggableid));
-
+            }
 
                 if (draggableid == 'C G E B'){
                     song += "cgeb"; 
                     console.log('song: ', song);  
-                }
+
+                    }
 
                 else if (draggableid=="F G B A"){
                     song += "fgba"; 
                     console.log(song);  
                 }
 
-                else
-                    {console.log("else happened");}
-                
-    }
-         }
+                 else if (draggableid=="C"){
+                 song += "c"; 
+                 console.log(song);  
+                 }
+                 else if (draggableid=="B"){
+                 song += "b"; 
+                 console.log(song);  
+                 }
+                 else if (draggableid=="C E"){
+                 song += "ce"; 
+                 console.log(song);  
+                 }
+                 else if (draggableid=="A F"){
+                 song += "af"; 
+                 console.log(song);  
+                 }
+                 else if (draggableid=="A F G"){
+                 song += "afg"; 
+                 console.log(song);  
+                 }
+                 else if (draggableid=="C E D"){
+                 song += "ced"; 
+                 console.log(song);  
+                 }
+
+                    else
+                        {console.log("else happened");}
+            }
+
         
     });
-    // console.log($("#blocks_list li").length);
       $("#blocks_list").hide();
       $("#song").hide();
-    //  $("div.Scroller").scrollLeft(300);
+      $(".text_block").hide();
  });
 
 
@@ -228,98 +255,10 @@ $(document).ready(function(){
             Seven_selected = false;
             $(".SevenNote").hide();
             $("#Seven").removeClass("NoteSelectionSelected");
+
         }
     });
 });
-
-
-
-
-// $(".draggable").draggable({
-//     helper: 'clone'
-// });
-
-// $("#droppable").droppable({
-//     drop: function(ev, ui) {
-//         $(this).append(ui.draggable.clone(true));
-//     }
-// });
- var highlight=false;
- var combined_width= 0;
- var song= "";
-$(document).ready(function() {
-    console.log("something should happen1")
-    $(".draggable").draggable({
-        helper: 'clone'
-    });
-    $(".droppable").droppable({
-         drop: function(event, ui) {
-            $(this)
-            // $(ui.draggable).detach().css({top:0, left: 0}).appendTo(this);
-             .addClass("highlighted")
-             highlight= true;
-             console.log(highlight);
-             console.log("something should be happening");
-             if (highlight == true) {
-                var width= $(".draggable").width();
-                $("#blocks_list").append("<li> block </li>");
-                console.log($("#blocks_list li").length);
-                combined_width= ((width) * ($("#blocks_list li").length));
-                console.log(combined_width);
-                var draggableid= ui.draggable.attr("id");
-                 $(".text_block").text(draggableid);
-                $(".text_block").show();
-
-                // text= draggableid;
-                // console.log(text);
-                // $("ui.droppable.h4").text(draggableid);
-                // console.log($("ui.droppable.h4").text(draggableid));
-
-
-                if (draggableid == 'C G E B'){
-                 song += "cgeb"; 
-                 console.log('song: ', song);  
-
-                 }
-
-                 else if (draggableid=="F G B A"){
-                 song += "fgba"; 
-                 console.log(song);  
-                 }
-
-                 else if (draggableid=="C"){
-                 song += "c"; 
-                 console.log(song);  
-                 }
-                 else if (draggableid=="B"){
-                 song += "b"; 
-                 console.log(song);  
-                 }
-                 else if (draggableid=="C E"){
-                 song += "ce"; 
-                 console.log(song);  
-                 }
-                 else if (draggableid=="A F"){
-                 song += "af"; 
-                 console.log(song);  
-                 }
-                 else if (draggableid=="A F G"){
-                 song += "afg"; 
-                 console.log(song);  
-                 }
-                 else if (draggableid=="C E D"){
-                 song += "ced"; 
-                 console.log(song);  
-                 }
-                 
-                 else
-                    {console.log("else happened");}
-                
-    }
-         }
-        
-    });
-
 
 var scale = {};
 document.getElementById('play').onclick = function() {
@@ -365,17 +304,11 @@ document.getElementById('play').onclick = function() {
         }
     }
 };
+
 document.getElementById('clear').onclick = function() {
     song = "";
 };
-    // console.log($("#blocks_list li").length);
-      $("#blocks_list").hide();
-      $("#song").hide();
-      $(".text_block").hide();
-    //  $("div.Scroller").scrollLeft(300);
-});
-
-
+   
 $(document).ready(function(){
     var Disney_clicked = "notclicked";
     var Allegro_clicked = "notclicked";
@@ -542,4 +475,5 @@ $(document).ready(function(){
             $("#Seven").removeClass("NoteSelectionSelected");
         }
     });
+
 });
