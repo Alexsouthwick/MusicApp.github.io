@@ -1,14 +1,14 @@
 
 
-// $(".draggable").draggable({
-//     helper: 'clone'
-// });
+$(".draggable").draggable({
+    helper: 'clone'
+});
 
-// $("#droppable").droppable({
-//     drop: function(ev, ui) {
-//         $(this).append(ui.draggable.clone(true));
-//     }
-// });
+$("#droppable").droppable({
+    drop: function(event, ui) {
+        $(this).append(ui.draggable.clone(true));
+    }
+});
  var highlight=false;
  var combined_width= 0;
  var song= "";
