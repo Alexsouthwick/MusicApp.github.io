@@ -1,20 +1,4 @@
 
-
-<<<<<<< HEAD
-
-// $(".draggable").draggable({
-//     helper: 'clone'
-// });
-
-// $("#droppable").droppable({
-//     drop: function(ev, ui) {
-//         $(this).append(ui.draggable.clone(true));
-//     }
-// });
- var highlight=false;
- var combined_width= 0;
- var song= "";
-=======
 $(".draggable").draggable({
     helper: 'clone'
 });
@@ -28,9 +12,11 @@ $("#droppable").droppable({
 var highlight=false;
 var combined_width= 0;
 var song= "";
->>>>>>> ddb99ed9d64c5c61492c93009e0621fa0b9b4f41
+
+
 $(document).ready(function() {
     console.log("something should happen1")
+
     $(".draggable").draggable({
         helper: 'clone'
     });
@@ -44,16 +30,18 @@ $(document).ready(function() {
              console.log(highlight);
              console.log("something should be happening");
              if (highlight == true) {
-                var width= $(".draggable").width();
-                $("#blocks_list").append("<li> block </li>");
-                console.log($("#blocks_list li").length);
-                combined_width= ((width) * ($("#blocks_list li").length));
-                console.log(combined_width);
+                // var width= $(".draggable").width();
+                // $("#blocks_list").append("<li> block </li>");
+                // console.log($("#blocks_list li").length);
+                // combined_width= ((width) * ($("#blocks_list li").length));
+                // console.log(combined_width);
                 var draggableid= ui.draggable.attr("id");
+                $(".text_block").show();
                 // text= draggableid;
                 // console.log(text);
                 // $("ui.droppable.h4").text(draggableid);
                 // console.log($("ui.droppable.h4").text(draggableid));
+            }
 
                 if (draggableid == 'C G E B'){
                     song += "cgeb"; 
@@ -99,7 +87,6 @@ $(document).ready(function() {
     });
       $("#blocks_list").hide();
       $("#song").hide();
-
       $(".text_block").hide();
  });
 
